@@ -1,0 +1,7 @@
+{
+    "bracketSameLine": false,
+    "printWidth": 130,
+    "semi": true,
+    "tabWidth": 2,
+    "editorconfig":true
+}

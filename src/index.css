@@ -1,0 +1,207 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  --app-background: #d1f2ff;
+  --app-layout-padding: 6px;
+  --app-layout-border-radius: 8px;
+  --app-layout-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  --navbar-height: 50px;
+  --sidebar-open-width: 200px;
+  --sidebar-closed-width: 54px;
+  --sidebar-footer-height: 25px;
+
+  --navbar-background: #ffffff;
+  --navbar-font-color: #000000;
+
+  --sidebar-background: #ffffff;
+  --sidebar-text-color: #18232D;
+  --sidebar-border: #cfcfcf;
+
+  --content-border-radius: 6px;
+  --primary-background: #fff;
+  --primary-text-color: #000000;
+
+  --secondary-background: #2fc4ff;
+  --secondary-text-color: #000000;
+
+}
+
+body {
+  margin: 0;
+}
+
+/* ------------------- Scrollbar ----------------------------- */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c4c4c4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: #e0e0e0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c4c4c4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+/* ------------------- App -------------------------- */
+.app {
+  background-color: var(--app-background);
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  /* 100% of the viewport height */
+  display: flex;
+  /* Use flexbox to stack child elements vertically */
+  flex-direction: column;
+  /* Stack children vertically */
+  padding: var(--app-layout-padding);
+  gap: var(--app-layout-padding);
+  overflow: hidden;
+}
+
+
+.content {
+  /* flex-grow: 1; */
+  display: flex;
+  flex-direction: row;
+  gap: var(--app-layout-padding);
+  height: calc(100vh - var(--navbar-height) - 2 * var(--app-layout-padding));
+}
+
+/* ------------------- Navbar ----------------------------- */
+.navbar {
+  background-color: var(--navbar-background);
+  color: var(--navbar-font-color);
+  height: var(--navbar-height);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 15px 0 8px;
+  /* border-radius: var(--app-layout-border-radius) var(--app-layout-border-radius) 0 0; */
+  border-radius: var(--app-layout-border-radius);
+  box-shadow: var(--app-layout-shadow);
+  font-size: 1.6rem;
+}
+
+.navbar-menu-icon {
+  /* margin-right: 10px; */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  /* Hide this */
+}
+
+.navbar-logo {
+  /* margin-right: 10px; */
+  height: calc(var(--navbar-height) - 5px);
+}
+
+.navbar-title {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.navbar-content {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#navbar-portal {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+  justify-content: flex-end;
+  /* width: 100%; */
+}
+
+/* ------------------- Navbar ----------------------------- */
+.sidebar {
+  background-color: var(--sidebar-background);
+  color: var(--sidebar-text-color);
+  border-right: 1px solid var(--sidebar-border);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* padding: 10px; */
+  border-radius: var(--app-layout-border-radius);
+  box-shadow: var(--app-layout-shadow);
+
+  transition: width 0.2s ease-in-out;
+
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #c4c4c4 #f0f0f0;
+  /* Color of the thumb and track */
+
+  /* Hide this */
+  /* display: none; */
+}
+
+/* ------------------- Main ----------------------------- */
+.main-content {
+  /* flex-grow: 1; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border-radius: var(--app-layout-border-radius);
+  background-color: var(--primary-background);
+  box-shadow: var(--app-layout-shadow);
+
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #c4c4c4 #f0f0f0;
+  /* Color of the thumb and track */
+}
+
+/* ------------------- Login ----------------------------- */
+
+.login-card-div {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  padding: 5px 10px;
+  border-radius: var(--app-layout-border-radius);
+  box-shadow: var(--app-layout-shadow);
+  background-color: #fff;
+  width: min(400px, 90%);
+  margin: auto;
+  text-align: center;
+}
+
+.login-logo {
+  width: 100px;
+  margin: auto;
+  object-fit: contain;
+}
+
+.login-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px;/ */
+}

@@ -1,0 +1,14 @@
+{
+  "components": {
+    "Button": {
+      "colorLinkHover": "rgb(0, 0, 0)"
+    }
+  },
+  "token": {
+    "colorPrimary": "#d1f2ff",
+    "colorInfo": "#d1f2ff",
+    "colorPrimaryText": "#000000",
+    "colorPrimaryTextActive": "#000000",
+    "colorPrimaryTextHover": "#000000"
+  }
+}
